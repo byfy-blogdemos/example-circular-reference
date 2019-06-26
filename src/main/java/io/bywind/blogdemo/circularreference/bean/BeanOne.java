@@ -15,4 +15,18 @@ public class BeanOne {
         this.beanTwo = beanTwo;
     }
 
+    public void sayHi() {
+        System.out.println("Hi, this is beanOne.");
+    }
+
+    public void talk() {
+        beanTwo.sayHi();
+        String reply = String.format("Hello, %s, glad to see you.", beanTwo);
+        System.out.println(reply);
+    }
+
+    @Override
+    public String toString() {
+        return "beanOne";
+    }
 }

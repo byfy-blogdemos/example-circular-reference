@@ -2,6 +2,10 @@ package io.bywind.blogdemo.circularreference;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ConfigurableApplicationContext;
+
+import io.bywind.blogdemo.circularreference.bean.BeanOne;
+import io.bywind.blogdemo.circularreference.bean.BeanTwo;
 
 /**
  * Created on Jun 25, 2019.
@@ -12,6 +16,11 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class CircularReferenceDemoApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(CircularReferenceDemoApplication.class);
+        ConfigurableApplicationContext context = SpringApplication.run(CircularReferenceDemoApplication.class);
+        BeanOne beanOne = context.getBean(BeanOne.class);
+        beanOne.talk();
+        System.out.println("=============================");
+        BeanTwo beanTwo = context.getBean(BeanTwo.class);
+        beanTwo.talk();
     }
 }
