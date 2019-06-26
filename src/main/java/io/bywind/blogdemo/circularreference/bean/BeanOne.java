@@ -16,7 +16,8 @@ public class BeanOne {
     }
 
     public void sayHi() {
-        System.out.println("Hi, this is beanOne.");
+        String message = String.format("Hi, this is %s.", this);
+        System.out.println(message);
     }
 
     public void talk() {
