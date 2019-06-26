@@ -1,5 +1,7 @@
 package io.bywind.blogdemo.circularreference.bean;
 
+import javax.annotation.PostConstruct;
+
 import org.springframework.stereotype.Component;
 
 /**
@@ -13,6 +15,11 @@ public class BeanOne {
 
     public BeanOne(BeanTwo beanTwo) {
         this.beanTwo = beanTwo;
+    }
+
+    @PostConstruct
+    public void init() {
+        beanTwo.setBeanOne(this);
     }
 
     public void sayHi() {

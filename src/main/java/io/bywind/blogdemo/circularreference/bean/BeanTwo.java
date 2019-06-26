@@ -9,9 +9,9 @@ import org.springframework.stereotype.Component;
  */
 @Component
 public class BeanTwo {
-    private final BeanOne beanOne;
+    private BeanOne beanOne;
 
-    public BeanTwo(BeanOne beanOne) {
+    public void setBeanOne(BeanOne beanOne) {
         this.beanOne = beanOne;
     }
 
