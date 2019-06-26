@@ -1,5 +1,6 @@
 package io.bywind.blogdemo.circularreference.bean;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 /**
@@ -9,9 +10,10 @@ import org.springframework.stereotype.Component;
  */
 @Component
 public class BeanOne {
-    private final BeanTwo beanTwo;
+    private BeanTwo beanTwo;
 
-    public BeanOne(BeanTwo beanTwo) {
+    @Autowired
+    public void setBeanTwo(BeanTwo beanTwo) {
         this.beanTwo = beanTwo;
     }
 
