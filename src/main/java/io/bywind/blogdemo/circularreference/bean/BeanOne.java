@@ -1,5 +1,6 @@
 package io.bywind.blogdemo.circularreference.bean;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 /**
@@ -9,11 +10,8 @@ import org.springframework.stereotype.Component;
  */
 @Component
 public class BeanOne {
-    private final BeanTwo beanTwo;
-
-    public BeanOne(BeanTwo beanTwo) {
-        this.beanTwo = beanTwo;
-    }
+    @Autowired
+    private BeanTwo beanTwo;
 
     public void sayHi() {
         String message = String.format("Hi, this is %s.", this);
