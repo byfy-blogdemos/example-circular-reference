@@ -1,2 +1,2 @@
-# blogdemo-lazyinit
+# blogdemo-circularreference.git
 

@@ -1,4 +1,4 @@
-package io.bywind.blogdemo.lazyinit;
+package io.bywind.blogdemo.circularreference;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -9,9 +9,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @author hatakawas
  */
 @SpringBootApplication
-public class LazyInitDemoApplication {
+public class CircularReferenceDemoApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(LazyInitDemoApplication.class);
+        SpringApplication.run(CircularReferenceDemoApplication.class);
     }
 }
