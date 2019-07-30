@@ -1,5 +1,6 @@
 package io.luomo.blogdemo.circularreference.bean;
 
+import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Component;
 
 /**
@@ -11,6 +12,7 @@ import org.springframework.stereotype.Component;
 public class BeanTwo {
     private final BeanOne beanOne;
 
+    @Lazy
     public BeanTwo(BeanOne beanOne) {
         this.beanOne = beanOne;
     }
