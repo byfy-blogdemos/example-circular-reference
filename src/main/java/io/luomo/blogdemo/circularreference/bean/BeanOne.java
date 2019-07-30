@@ -1,4 +1,4 @@
-package io.bywind.blogdemo.circularreference.bean;
+package io.luomo.blogdemo.circularreference.bean;
 
 import javax.annotation.PostConstruct;
 
