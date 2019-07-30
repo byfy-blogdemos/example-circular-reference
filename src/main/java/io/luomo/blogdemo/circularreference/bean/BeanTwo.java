@@ -12,20 +12,4 @@ import org.springframework.stereotype.Component;
 public class BeanTwo {
     @Autowired
     private BeanOne beanOne;
-
-    public void sayHi() {
-        String message = String.format("Hi, this is %s.", this);
-        System.out.println(message);
-    }
-
-    public void talk() {
-        beanOne.sayHi();
-        String reply = String.format("Hello, %s, glad to see you.", beanOne);
-        System.out.println(reply);
-    }
-
-    @Override
-    public String toString() {
-        return "beanTwo";
-    }
 }
