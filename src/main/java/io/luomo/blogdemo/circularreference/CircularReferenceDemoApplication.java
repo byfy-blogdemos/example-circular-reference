@@ -18,9 +18,6 @@ public class CircularReferenceDemoApplication {
     public static void main(String[] args) {
         ConfigurableApplicationContext context = SpringApplication.run(CircularReferenceDemoApplication.class);
         BeanOne beanOne = context.getBean(BeanOne.class);
-        beanOne.talk();
-        System.out.println("=============================");
         BeanTwo beanTwo = context.getBean(BeanTwo.class);
-        beanTwo.talk();
     }
 }
