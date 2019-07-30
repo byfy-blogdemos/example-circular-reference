@@ -1,4 +1,4 @@
-package io.bywind.blogdemo.circularreference.bean;
+package io.luomo.blogdemo.circularreference.bean;
 
 import org.springframework.stereotype.Component;
 
@@ -8,11 +8,11 @@ import org.springframework.stereotype.Component;
  * @author hatakawas
  */
 @Component
-public class BeanOne {
-    private final BeanTwo beanTwo;
+public class BeanTwo {
+    private final BeanOne beanOne;
 
-    public BeanOne(BeanTwo beanTwo) {
-        this.beanTwo = beanTwo;
+    public BeanTwo(BeanOne beanOne) {
+        this.beanOne = beanOne;
     }
 
     public void sayHi() {
@@ -21,13 +21,13 @@ public class BeanOne {
     }
 
     public void talk() {
-        beanTwo.sayHi();
-        String reply = String.format("Hello, %s, glad to see you.", beanTwo);
+        beanOne.sayHi();
+        String reply = String.format("Hello, %s, glad to see you.", beanOne);
         System.out.println(reply);
     }
 
     @Override
     public String toString() {
-        return "beanOne";
+        return "beanTwo";
     }
 }
