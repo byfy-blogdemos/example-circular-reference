@@ -1,4 +1,4 @@
-package io.bywind.blogdemo.circularreference.bean;
+package io.luomo.blogdemo.circularreference.bean;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -9,9 +9,9 @@ import org.springframework.stereotype.Component;
  * @author hatakawas
  */
 @Component
-public class BeanOne {
+public class BeanTwo {
     @Autowired
-    private BeanTwo beanTwo;
+    private BeanOne beanOne;
 
     public void sayHi() {
         String message = String.format("Hi, this is %s.", this);
@@ -19,13 +19,13 @@ public class BeanOne {
     }
 
     public void talk() {
-        beanTwo.sayHi();
-        String reply = String.format("Hello, %s, glad to see you.", beanTwo);
+        beanOne.sayHi();
+        String reply = String.format("Hello, %s, glad to see you.", beanOne);
         System.out.println(reply);
     }
 
     @Override
     public String toString() {
-        return "beanOne";
+        return "beanTwo";
     }
 }

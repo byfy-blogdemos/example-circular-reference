@@ -1,11 +1,11 @@
-package io.bywind.blogdemo.circularreference;
+package io.luomo.blogdemo.circularreference;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
 
-import io.bywind.blogdemo.circularreference.bean.BeanOne;
-import io.bywind.blogdemo.circularreference.bean.BeanTwo;
+import io.luomo.blogdemo.circularreference.bean.BeanOne;
+import io.luomo.blogdemo.circularreference.bean.BeanTwo;
 
 /**
  * Created on Jun 25, 2019.
