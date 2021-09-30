@@ -1,2 +1,2 @@
-# blogdemo-circularreference.git
+# blogdemo-spring-circular-reference
 
